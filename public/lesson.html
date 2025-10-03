@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnHub - Học Lập Trình Online</title>
+     <link rel="stylesheet" href="/css/style.css">
+     <script src="/js/script.js"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo" onclick="showHomePage()">LearnHub</div>
+            <ul class="nav-menu">
+                <li><span class="nav-link" onclick="showHomePage()">Trang Chủ</span></li>
+                <li><span class="nav-link" onclick="scrollToSection('.featured-section')">Khóa Học</span></li>
+                <li><span class="nav-link" onclick="scrollToSection('.categories-section')">Danh Mục</span></li>
+                <li><span class="nav-link">Blog</span></li>
+                <li><span class="nav-link">Giới Thiệu</span></li>
+            </ul>
+            <div class="nav-actions" id="navActions">
+                <span class="btn btn-secondary" onclick="showLoginModal()">Đăng Nhập</span>
+                <span class="btn btn-primary" onclick="showRegisterModal()">Đăng Ký</span>
+            </div>
+        </nav>
+    </header>
+    <section class="course-hero">
+            <div class="container">
+                <div class="course-hero-content">
+                    <div class="course-info">
+                        <h1>Xây Dựng Ứng Dụng Web Hiện Đại Với React.js</h1>
+                        <p>Khóa học toàn diện từ cơ bản đến nâng cao, giúp bạn thành thạo React.js và các công nghệ liên quan để xây dựng ứng dụng web chuyên nghiệp.</p>
+                        
+                        <div class="course-meta">
+                            <div class="meta-item">
+                                <span>👨‍🏫</span>
+                                <span>Nguyễn Văn A</span>
+                            </div>
+                            <div class="meta-item">
+                                <span>⭐</span>
+                                <span>4.8 (1,234 đánh giá)</span>
+                            </div>
+                            <div class="meta-item">
+                                <span>👥</span>
+                                <span>12,567 học viên</span>
+                            </div>
+                            <div class="meta-item">
+                                <span>🌐</span>
+                                <span>Tiếng Việt</span>
+                            </div>
+                        </div>
+
+                        <div class="course-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">40+</span>
+                                <span class="stat-label">Bài học</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">25 giờ</span>
+                                <span class="stat-label">Video</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">15</span>
+                                <span class="stat-label">Dự án</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">Trọn đời</span>
+                                <span class="stat-label">Truy cập</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card-sticky">
+                        <div class="video-preview" onclick="playPreview()">
+                            <div class="play-button">▶</div>
+                        </div>
+                        
+                        <div class="price-section">
+                            <div class="current-price">
+                                1,299,000đ
+                                <span class="discount-badge">-35%</span>
+                            </div>
+                            <div class="old-price">1,999,000đ</div>
+                        </div>
+
+                        <button class="enroll-btn" onclick="enrollCourse()">
+                            Đăng Ký Học Ngay
+                        </button>
+                        
+                        <button class="wishlist-btn" onclick="toggleWishlist()">
+                            ❤️ Thêm vào danh sách yêu thích
+                        </button>
+
+                        <ul class="course-features">
+                            <li><span>📱</span> Học trên mọi thiết bị</li>
+                            <li><span>🎯</span> Dự án thực tế</li>
+                            <li><span>🏆</span> Chứng chỉ hoàn thành</li>
+                            <li><span>💬</span> Hỗ trợ 24/7</li>
+                            <li><span>🔄</span> Cập nhật nội dung</li>
+                            <li><span>💰</span> Hoàn tiền trong 30 ngày</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="main-content">
+                <div class="content-nav">
+                    <div class="nav-tab active" onclick="showTab('overview')">Tổng quan</div>
+                    <div class="nav-tab" onclick="showTab('curriculum')">Chương trình học</div>
+                    <div class="nav-tab" onclick="showTab('instructor')">Giảng viên</div>
+                    <div class="nav-tab" onclick="showTab('reviews')">Đánh giá</div>
+                </div>
+
+                <div id="overview" class="tab-content active">
+                    <h2>Về khóa học này</h2>
+                    <p>React.js là thư viện JavaScript phổ biến nhất hiện nay để xây dựng giao diện người dùng. Khóa học này sẽ đưa bạn từ người mới bắt đầu đến trở thành một React developer chuyên nghiệp.</p>
+                    
+                    <h3>Bạn sẽ học được gì?</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.8rem;"><span style="color: #10b981;">✓</span> Nắm vững các khái niệm cốt lõi của React.js</li>
+                        <li style="margin-bottom: 0.8rem;"><span style="color: #10b981;">✓</span> Xây dựng component tái sử dụng</li>
+                        <li style="margin-bottom: 0.8rem;"><span style="color: #10b981;">✓</span> Quản lý state với hooks và context API</li>
+                        <li style="margin-bottom: 0.8rem;"><span style="color: #10b981;">✓</span> Tích hợp với API và xử lý dữ liệu</li>
+                        <li style="margin-bottom: 0.8rem;"><span style="color: #10b981;">✓</span> Routing với React Router</li>
+                        <li style="margin-bottom: 0.8rem;"><span style="color: #10b981;">✓</span> Testing và deployment</li>
+                        <li style="margin-bottom: 0.8rem;"><span style="color: #10b981;">✓</span> Best practices và performance optimization</li>
+                    </ul>
+
+                    <h3>Yêu cầu</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.8rem;"><span style="color: #667eea;">•</span> Kiến thức cơ bản về HTML, CSS, JavaScript</li>
+                        <li style="margin-bottom: 0.8rem;"><span style="color: #667eea;">•</span> Máy tính có kết nối internet</li>
+                        <li style="margin-bottom: 0.8rem;"><span style="color: #667eea;">•</span> Đam mê học hỏi công nghệ mới</li>
+                    </ul>
+
+                    <h3>Đối tượng mục tiêu</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.8rem;"><span style="color: #667eea;">•</span> Developer muốn học React.js từ đầu</li>
+                        <li style="margin-bottom: 0.8rem;"><span style="color: #667eea;">•</span> Frontend developer muốn nâng cao kỹ năng</li>
+                        <li style="margin-bottom: 0.8rem;"><span style="color: #667eea;">•</span> Sinh viên ngành CNTT</li>
+                        <li style="margin-bottom: 0.8rem;"><span style="color: #667eea;">•</span> Người chuyển nghề sang lập trình</li>
+                    </ul>
+                </div>
+
+                <div id="curriculum" class="tab-content">
+                    <h2>Chương trình học</h2>
+                    <p style="margin-bottom: 2rem;">40 bài học • 25 giờ video • 15 dự án thực hành</p>
+
+                    <div class="curriculum-section">
+                        <div class="section-title" onclick="toggleSection(1)">
+                            <span>📚</span>
+                            <span>Chương 1: Giới thiệu React.js (8 bài)</span>
+                            <span class="section-toggle">▼</span>
+                        </div>
+                        <div class="section-content" id="section-1">
+                            <div class="lesson-item">
+                                <div class="lesson-icon">▶️</div>
+                                <div class="lesson-info">
+                                    <div class="lesson-title">React.js là gì? Tại sao nên học React?</div>
+                                    <div class="lesson-duration">15:30</div>
+                                </div>
+                            </div>
+                            <div class="lesson-item">
+                                <div class="lesson-icon">▶️</div>
+                                <div class="lesson-info">
+                                    <div class="lesson-title">Cài đặt môi trường phát triển</div>
+                                    <div class="lesson-duration">12:45</div>
+                                </div>
+                            </div>
+                            <div class="lesson-item">
+                                <div class="lesson-icon">▶️</div>
+                                <div class="lesson-info">
+                                    <div class="lesson-title">Tạo ứng dụng React đầu tiên</div>
+                                    <div class="lesson-duration">18:20</div>
+                                </div>
+                            </div>
+                            <div class="lesson-item">
+                                <div class="lesson-icon">📝</div>
+                                <div class="lesson-info">
+                                    <div class="lesson-title">Bài tập: Hello World với React</div>
+                                    <div class="lesson-duration">Thực hành</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="curriculum-section">
+                        <div class="section-title" onclick="toggleSection(2)">
+                            <span>🏗️</span>
+                            <span>Chương 2: Components và Props (10 bài)</span>
+                            <span class="section-toggle">▼</span>
+                        </div>
+                        <div class="section-content" id="section-2">
+                            <div class="lesson-item">
+                                <div class="lesson-icon">▶️</div>
+                                <div class="lesson-info">
+                                    <div class="lesson-title">Hiểu về Components trong React</div>
+                                    <div class="lesson-duration">22:15</div>
+                                </div>
+                            </div>
+                            <div class="lesson-item">
+                                <div class="lesson-icon">▶️</div>
+                                <div class="lesson-info">
+                                    <div class="lesson-title">Function Components vs Class Components</div>
+                                    <div class="lesson-duration">18:30</div>
+                                </div>
+                            </div>
+                            <div class="lesson-item">
+                                <div class="lesson-icon">▶️</div>
+                                <div class="lesson-info">
+                                    <div class="lesson-title">Props và cách truyền dữ liệu</div>
+                                    <div class="lesson-duration">25:45</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="curriculum-section">
+                        <div class="section-title" onclick="toggleSection(3)">
+                            <span>⚡</span>
+                            <span>Chương 3: State và Hooks (12 bài)</span>
+                            <span class="section-toggle">▼</span>
+                        </div>
+                        <div class="section-content" id="section-3">
+                            <div class="lesson-item">
+                                <div class="lesson-icon">▶️</div>
+                                <div class="lesson-info">
+                                    <div class="lesson-title">Giới thiệu về State</div>
+                                    <div class="lesson-duration">20:30</div>
+                                </div>
+                            </div>
+                            <div class="lesson-item">
+                                <div class="lesson-icon">▶️</div>
+                                <div class="lesson-info">
+                                    <div class="lesson-title">useState Hook</div>
+                                    <div class="lesson-duration">28:15</div>
+                                </div>
+                            </div>
+                            <div class="lesson-item">
+                                <div class="lesson-icon">▶️</div>
+                                <div class="lesson-info">
+                                    <div class="lesson-title">useEffect Hook</div>
+                                    <div class="lesson-duration">35:20</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="curriculum-section">
+                        <div class="section-title" onclick="toggleSection(4)">
+                            <span>🚀</span>
+                            <span>Chương 4: Dự án thực tế (10 bài)</span>
+                            <span class="section-toggle">▼</span>
+                        </div>
+                        <div class="section-content" id="section-4">
+                            <div class="lesson-item">
+                                <div class="lesson-icon">🎯</div>
+                                <div class="lesson-info">
+                                    <div class="lesson-title">Dự án 1: Todo App</div>
+                                    <div class="lesson-duration">2 giờ</div>
+                                </div>
+                            </div>
+                            <div class="lesson-item">
+                                <div class="lesson-icon">🎯</div>
+                                <div class="lesson-info">
+                                    <div class="lesson-title">Dự án 2: Weather App với API</div>
+                                    <div class="lesson-duration">3 giờ</div>
+                                </div>
+                            </div>
+                            <div class="lesson-item">
+                                <div class="lesson-icon">🎯</div>
+                                <div class="lesson-info">
+                                    <div class="lesson-title">Dự án 3: E-commerce Website</div>
+                                    <div class="lesson-duration">5 giờ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="instructor" class="tab-content">
+                    <h2>Giảng viên</h2>
+                    
+                    <div class="instructor-card">
+                        <div class="instructor-avatar">A</div>
+                        <div class="instructor-info">
+                            <h3>Nguyễn Văn A</h3>
+                            <p>Senior Frontend Developer với 8+ năm kinh nghiệm</p>
+                            <p>Chuyên gia React.js, đã làm việc tại các công ty công nghệ hàng đầu như FPT, VNG, và Tiki. Có kinh nghiệm giảng dạy và đào tạo cho hơn 10,000 học viên.</p>
+                            
+                            <div class="instructor-stats">
+                                <div class="stat-item">
+                                    <span class="stat-number">4.9</span>
+                                    <span class="stat-label">Đánh giá TB</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">15,234</span>
+                                    <span class="stat-label">Học viên</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">25</span>
+                                    <span class="stat-label">Khóa học</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">8+</span>
+                                    <span class="stat-label">Năm KN</span>
+                                </div>
+                            </div>
+
+                            <h4>Kinh nghiệm & Chứng chỉ:</h4>
+                            <ul style="list-style: none; padding: 0; margin-top: 1rem;">
+                                <li style="margin-bottom: 0.5rem;">🏢 Senior Developer tại Tiki (2020-2024)</li>
+                                <li style="margin-bottom: 0.5rem;">🏢 Tech Lead tại VNG (2018-2020)</li>
+                                <li style="margin-bottom: 0.5rem;">🏆 AWS Certified Developer</li>
+                                <li style="margin-bottom: 0.5rem;">🏆 Google Cloud Professional</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="reviews" class="tab-content">
+                    <h2>Đánh giá từ học viên</h2>
+                    <div style="display: flex; align-items: center; gap: 2rem; margin-bottom: 2rem; flex-wrap: wrap;">
+                        <div style="text-align: center;">
+                            <div style="font-size: 3rem; font-weight: bold; color: #667eea;">4.8</div>
+                            <div>⭐⭐⭐⭐⭐</div>
+                            <div style="color: #666;">1,234 đánh giá</div>
+                        </div>
+                        <div style="flex: 1; min-width: 300px;">
+                            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.5rem;">
+                                <span>5⭐</span>
+                                <div style="flex: 1; background: #e2e8f0; height: 8px; border-radius: 4px;">
+                                    <div style="width: 75%; height: 100%; background: #ffa500; border-radius: 4px;"></div>
+                                </div>
+                                <span>923</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.5rem;">
+                                <span>4⭐</span>
+                                <div style="flex: 1; background: #e2e8f0; height: 8px; border-radius: 4px;">
+                                    <div style="width: 20%; height: 100%; background: #ffa500; border-radius: 4px;"></div>
+                                </div>
+                                <span>246</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.5rem;">
+                                <span>3⭐</span>
+                                <div style="flex: 1; background: #e2e8f0; height: 8px; border-radius: 4px;">
+                                    <div style="width: 3%; height: 100%; background: #ffa500; border-radius: 4px;"></div>
+                                </div>
+                                <span>37</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.5rem;">
+                                <span>2⭐</span>
+                                <div style="flex: 1; background: #e2e8f0; height: 8px; border-radius: 4px;">
+                                    <div style="width: 1%; height: 100%; background: #ffa500; border-radius: 4px;"></div>
+                                </div>
+                                <span>12</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 1rem;">
+                                <span>1⭐</span>
+                                <div style="flex: 1; background: #e2e8f0; height: 8px; border-radius: 4px;">
+                                    <div style="width: 1%; height: 100%; background: #ffa500; border-radius: 4px;"></div>
+                                </div>
+                                <span>16</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="review-item">
+                        <div class="review-header">
+                            <div class="reviewer-avatar">M</div>
+                            <div>
+                                <div style="font-weight: bold;">Minh Tuấn</div>
+                                <div style="font-size: 0.9rem; color: #666;">2 tháng trước</div>
+                            </div>
+                            <div class="rating">⭐⭐⭐⭐⭐</div>
+                        </div>
+                        <p>Khóa học rất chất lượng, giảng viên giải thích rõ ràng, dễ hiểu. Sau khi học xong mình đã ứng tuyển thành công vào vị trí Frontend Developer với mức lương 15M. Cảm ơn thầy và LearnHub!</p>
+                    </div>
+
+                    <div class="review-item">
+                        <div class="review-header">
+                            <div class="reviewer-avatar">H</div>
+                            <div>
+                                <div style="font-weight: bold;">Hoàng Linh</div>
+                                <div style="font-size: 0.9rem; color: #666;">1 tháng trước</div>
+                            </div>
+                            <div class="rating">⭐⭐⭐⭐⭐</div>
+                        </div>
+                        <p>Mình là người mới bắt đầu học lập trình, khóa học này thực sự phù hợp. Từ cơ bản đến nâng cao, có nhiều dự án thực hành giúp mình hiểu rõ hơn. Support của team cũng rất nhiệt tình.</p>
+                    </div>
+
+                    <div class="review-item">
+                        <div class="review-header">
+                            <div class="reviewer-avatar">D</div>
+                            <div>
+                                <div style="font-weight: bold;">Đức Anh</div>
+                                <div style="font-size: 0.9rem; color: #666;">3 tuần trước</div>
+                            </div>
+                            <div class="rating">⭐⭐⭐⭐⭐</div>
+                        </div>
+                        <p>Khóa học cập nhật theo trend mới nhất, các best practices rất hữu ích. Dự án cuối khóa giúp mình có portfolio ấn tượng để ứng tuyển việc làm.</p>
+                    </div>
+
+                    <div class="review-item">
+                        <div class="review-header">
+                            <div class="reviewer-avatar">T</div>
+                            <div>
+                                <div style="font-weight: bold;">Thúy Nga</div>
+                                <div style="font-size: 0.9rem; color: #666;">1 tuần trước</div>
+                            </div>
+                            <div class="rating">⭐⭐⭐⭐⭐</div>
+                        </div>
+                        <p>Giá cả hợp lý so với chất lượng nội dung. Mình đã thử nhiều khóa học React khác nhưng khóa này là tốt nhất. Recommend cho ai muốn học React từ đầu!</p>
+                    </div>
+
+                    <button style="background: transparent; color: #667eea; border: 2px solid #667eea; padding: 1rem 2rem; border-radius: 8px; cursor: pointer; margin-top: 2rem;" onclick="loadMoreReviews()">
+                        Xem thêm đánh giá
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <section class="related-courses">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 3rem;">
+                    <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Khóa học liên quan</h2>
+                    <p style="font-size: 1.2rem; color: #666;">Những khóa học khác bạn có thể quan tâm</p>
+                </div>
+                
+                <div class="courses-grid">
+                    <div class="course-card">
+                        <div class="course-thumbnail">
+                            <div class="premium-badge">PREMIUM</div>
+                            Node.js Backend
+                        </div>
+                        <div class="course-content">
+                            <div class="course-category">Backend</div>
+                            <h3 class="course-title">Lập Trình Backend Chuyên Nghiệp Với Node.js</h3>
+                            <div class="course-instructor">Giảng viên: Trần Thị B</div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem;">
+                                <div class="course-rating">⭐ 4.9 (987)</div>
+                                <div class="course-price">1,599,000đ</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card">
+                        <div class="course-thumbnail">
+                            JavaScript Nâng Cao
+                        </div>
+                        <div class="course-content">
+                            <div class="course-category">Frontend</div>
+                            <h3 class="course-title">Thành Thạo JavaScript ES6+ và Async Programming</h3>
+                            <div class="course-instructor">Giảng viên: Lê Văn C</div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem;">
+                                <div class="course-rating">⭐ 4.7 (2,156)</div>
+                                <div class="course-price">999,000đ</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card">
+                        <div class="course-thumbnail">
+                            <div class="premium-badge">PREMIUM</div>
+                            Full-Stack MERN
+                        </div>
+                        <div class="course-content">
+                            <div class="course-category">Full-Stack</div>
+                            <h3 class="course-title">Xây Dựng Ứng Dụng Full-Stack với MERN Stack</h3>
+                            <div class="course-instructor">Giảng viên: Phạm Văn D</div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem;">
+                                <div class="course-rating">⭐ 4.8 (1,543)</div>
+                                <div class="course-price">2,199,000đ</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>LearnHub</h3>
+                    <p>Nền tảng học lập trình trực tuyến hàng đầu Việt Nam. Chúng tôi cam kết mang đến những khóa học chất lượng cao với giá cả hợp lý.</p>
+                    <div style="margin-top: 1rem;">
+                        <span style="color: #667eea;">📧</span> contact@learnhub.vn<br>
+                        <span style="color: #667eea;">📞</span> 1900 1234<br>
+                        <span style="color: #667eea;">📍</span> TP. Hồ Chí Minh, Việt Nam
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Khóa Học</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" onclick="filterCourses('web')">Web Development</a></li>
+                        <li><a href="#" onclick="filterCourses('mobile')">Mobile App</a></li>
+                        <li><a href="#" onclick="filterCourses('ai')">AI & Machine Learning</a></li>
+                        <li><a href="#" onclick="filterCourses('design')">UI/UX Design</a></li>
+                        <li><a href="#" onclick="filterCourses('cloud')">Cloud Computing</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Hỗ Trợ</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Trung tâm trợ giúp</a></li>
+                        <li><a href="#">Hướng dẫn thanh toán</a></li>
+                        <li><a href="#">Chính sách hoàn tiền</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Theo Dõi</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">YouTube</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">Discord</a></li>
+                        <li><a href="#">Newsletter</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 LearnHub. Tất cả quyền được bảo lưu. | 
+                   <a href="#" style="color: #667eea;">Điều khoản dịch vụ</a> | 
+                   <a href="#" style="color: #667eea;">Chính sách bảo mật</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
