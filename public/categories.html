@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh Mục - LearnHub</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="module" src="/js/script.js"></script>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo" onclick="window.location.href='home.html'">LearnHub</div>
+            <ul class="nav-menu">
+                <li><a class="nav-link" href="home.html">Trang Chủ</a></li>
+                <li><a class="nav-link" href="courses.html">Khóa Học</a></li>
+                <li><a class="nav-link active" href="categories.html">Danh Mục</a></li>
+                <li><a class="nav-link" href="blog.html">Blog</a></li>
+                <li><a class="nav-link" href="about.html">Giới Thiệu</a></li>
+            </ul>
+            <div class="nav-actions" id="navActions">
+                <span class="btn btn-secondary" onclick="showLoginModal()">Đăng Nhập</span>
+                <span class="btn btn-primary" onclick="showRegisterModal()">Đăng Ký</span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Danh Mục Khóa Học</h1>
+            <p>Khám phá các lĩnh vực học tập đa dạng và tìm con đường phù hợp với bạn</p>
+        </div>
+    </section>
+
+    <!-- CATEGORIES GRID -->
+    <section class="categories-detail-section">
+        <div class="container">
+            <!-- Web Development -->
+            <div class="category-detail-card">
+                <div class="category-detail-header">
+                    <div class="category-detail-icon">💻</div>
+                    <div class="category-detail-info">
+                        <h2>Web Development</h2>
+                        <p>Học cách xây dựng website và ứng dụng web từ cơ bản đến chuyên nghiệp</p>
+                        <div class="category-stats">
+                            <span>📚 120+ khóa học</span>
+                            <span>👥 8,500+ học viên</span>
+                            <span>⭐ 4.7 đánh giá</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-topics">
+                    <h3>Chủ đề phổ biến:</h3>
+                    <div class="topic-tags">
+                        <span class="topic-tag">HTML & CSS</span>
+                        <span class="topic-tag">JavaScript</span>
+                        <span class="topic-tag">React.js</span>
+                        <span class="topic-tag">Vue.js</span>
+                        <span class="topic-tag">Angular</span>
+                        <span class="topic-tag">Node.js</span>
+                        <span class="topic-tag">Express.js</span>
+                        <span class="topic-tag">TypeScript</span>
+                    </div>
+                </div>
+                <button class="btn btn-primary" onclick="window.location.href='courses.html?category=web'">
+                    Xem Tất Cả Khóa Học
+                </button>
+            </div>
+
+            <!-- Mobile App Development -->
+            <div class="category-detail-card">
+                <div class="category-detail-header">
+                    <div class="category-detail-icon">📱</div>
+                    <div class="category-detail-info">
+                        <h2>Mobile App Development</h2>
+                        <p>Phát triển ứng dụng di động cho iOS và Android một cách chuyên nghiệp</p>
+                        <div class="category-stats">
+                            <span>📚 80+ khóa học</span>
+                            <span>👥 5,200+ học viên</span>
+                            <span>⭐ 4.8 đánh giá</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-topics">
+                    <h3>Chủ đề phổ biến:</h3>
+                    <div class="topic-tags">
+                        <span class="topic-tag">React Native</span>
+                        <span class="topic-tag">Flutter</span>
+                        <span class="topic-tag">Swift</span>
+                        <span class="topic-tag">Kotlin</span>
+                        <span class="topic-tag">iOS Development</span>
+                        <span class="topic-tag">Android Development</span>
+                        <span class="topic-tag">Xamarin</span>
+                        <span class="topic-tag">Ionic</span>
+                    </div>
+                </div>
+                <button class="btn btn-primary" onclick="window.location.href='courses.html?category=mobile'">
+                    Xem Tất Cả Khóa Học
+                </button>
+            </div>
+
+            <!-- AI & Machine Learning -->
+            <div class="category-detail-card">
+                <div class="category-detail-header">
+                    <div class="category-detail-icon">🤖</div>
+                    <div class="category-detail-info">
+                        <h2>AI & Machine Learning</h2>
+                        <p>Khám phá thế giới trí tuệ nhân tạo và học máy với các thuật toán hiện đại</p>
+                        <div class="category-stats">
+                            <span>📚 60+ khóa học</span>
+                            <span>👥 4,800+ học viên</span>
+                            <span>⭐ 4.9 đánh giá</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-topics">
+                    <h3>Chủ đề phổ biến:</h3>
+                    <div class="topic-tags">
+                        <span class="topic-tag">Python ML</span>
+                        <span class="topic-tag">TensorFlow</span>
+                        <span class="topic-tag">PyTorch</span>
+                        <span class="topic-tag">Deep Learning</span>
+                        <span class="topic-tag">Neural Networks</span>
+                        <span class="topic-tag">NLP</span>
+                        <span class="topic-tag">Computer Vision</span>
+                        <span class="topic-tag">Data Science</span>
+                    </div>
+                </div>
+                <button class="btn btn-primary" onclick="window.location.href='courses.html?category=ai'">
+                    Xem Tất Cả Khóa Học
+                </button>
+            </div>
+
+            <!-- UI/UX Design -->
+            <div class="category-detail-card">
+                <div class="category-detail-header">
+                    <div class="category-detail-icon">🎨</div>
+                    <div class="category-detail-info">
+                        <h2>UI/UX Design</h2>
+                        <p>Thiết kế giao diện và trải nghiệm người dùng chuyên nghiệp và hấp dẫn</p>
+                        <div class="category-stats">
+                            <span>📚 90+ khóa học</span>
+                            <span>👥 6,300+ học viên</span>
+                            <span>⭐ 4.8 đánh giá</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-topics">
+                    <h3>Chủ đề phổ biến:</h3>
+                    <div class="topic-tags">
+                        <span class="topic-tag">Figma</span>
+                        <span class="topic-tag">Adobe XD</span>
+                        <span class="topic-tag">Sketch</span>
+                        <span class="topic-tag">Prototyping</span>
+                        <span class="topic-tag">User Research</span>
+                        <span class="topic-tag">Wireframing</span>
+                        <span class="topic-tag">Design Systems</span>
+                        <span class="topic-tag">Interaction Design</span>
+                    </div>
+                </div>
+                <button class="btn btn-primary" onclick="window.location.href='courses.html?category=design'">
+                    Xem Tất Cả Khóa Học
+                </button>
+            </div>
+
+            <!-- Cloud Computing -->
+            <div class="category-detail-card">
+                <div class="category-detail-header">
+                    <div class="category-detail-icon">☁️</div>
+                    <div class="category-detail-info">
+                        <h2>Cloud Computing</h2>
+                        <p>Làm chủ các nền tảng đám mây và kiến trúc hệ thống hiện đại</p>
+                        <div class="category-stats">
+                            <span>📚 70+ khóa học</span>
+                            <span>👥 3,900+ học viên</span>
+                            <span>⭐ 4.7 đánh giá</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-topics">
+                    <h3>Chủ đề phổ biến:</h3>
+                    <div class="topic-tags">
+                        <span class="topic-tag">AWS</span>
+                        <span class="topic-tag">Azure</span>
+                        <span class="topic-tag">Google Cloud</span>
+                        <span class="topic-tag">Docker</span>
+                        <span class="topic-tag">Kubernetes</span>
+                        <span class="topic-tag">DevOps</span>
+                        <span class="topic-tag">CI/CD</span>
+                        <span class="topic-tag">Serverless</span>
+                    </div>
+                </div>
+                <button class="btn btn-primary" onclick="window.location.href='courses.html?category=cloud'">
+                    Xem Tất Cả Khóa Học
+                </button>
+            </div>
+
+            <!-- Cybersecurity -->
+            <div class="category-detail-card">
+                <div class="category-detail-header">
+                    <div class="category-detail-icon">🔒</div>
+                    <div class="category-detail-info">
+                        <h2>Cybersecurity</h2>
+                        <p>Bảo mật hệ thống và ứng dụng trong thời đại số</p>
+                        <div class="category-stats">
+                            <span>📚 45+ khóa học</span>
+                            <span>👥 2,700+ học viên</span>
+                            <span>⭐ 4.8 đánh giá</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-topics">
+                    <h3>Chủ đề phổ biến:</h3>
+                    <div class="topic-tags">
+                        <span class="topic-tag">Ethical Hacking</span>
+                        <span class="topic-tag">Penetration Testing</span>
+                        <span class="topic-tag">Network Security</span>
+                        <span class="topic-tag">Web Security</span>
+                        <span class="topic-tag">Cryptography</span>
+                        <span class="topic-tag">Security Analysis</span>
+                        <span class="topic-tag">OWASP</span>
+                        <span class="topic-tag">Security Audit</span>
+                    </div>
+                </div>
+                <button class="btn btn-primary" onclick="window.location.href='courses.html?category=security'">
+                    Xem Tất Cả Khóa Học
+                </button>
+            </div>
+
+            <!-- Database & Backend -->
+            <div class="category-detail-card">
+                <div class="category-detail-header">
+                    <div class="category-detail-icon">🗄️</div>
+                    <div class="category-detail-info">
+                        <h2>Database & Backend</h2>
+                        <p>Quản lý cơ sở dữ liệu và phát triển backend mạnh mẽ</p>
+                        <div class="category-stats">
+                            <span>📚 75+ khóa học</span>
+                            <span>👥 5,600+ học viên</span>
+                            <span>⭐ 4.7 đánh giá</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-topics">
+                    <h3>Chủ đề phổ biến:</h3>
+                    <div class="topic-tags">
+                        <span class="topic-tag">SQL</span>
+                        <span class="topic-tag">MongoDB</span>
+                        <span class="topic-tag">PostgreSQL</span>
+                        <span class="topic-tag">MySQL</span>
+                        <span class="topic-tag">Redis</span>
+                        <span class="topic-tag">GraphQL</span>
+                        <span class="topic-tag">REST API</span>
+                        <span class="topic-tag">Microservices</span>
+                    </div>
+                </div>
+                <button class="btn btn-primary" onclick="window.location.href='courses.html?category=backend'">
+                    Xem Tất Cả Khóa Học
+                </button>
+            </div>
+
+            <!-- Game Development -->
+            <div class="category-detail-card">
+                <div class="category-detail-header">
+                    <div class="category-detail-icon">🎮</div>
+                    <div class="category-detail-info">
+                        <h2>Game Development</h2>
+                        <p>Tạo ra những trò chơi độc đáo và hấp dẫn</p>
+                        <div class="category-stats">
+                            <span>📚 55+ khóa học</span>
+                            <span>👥 3,400+ học viên</span>
+                            <span>⭐ 4.6 đánh giá</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-topics">
+                    <h3>Chủ đề phổ biến:</h3>
+                    <div class="topic-tags">
+                        <span class="topic-tag">Unity</span>
+                        <span class="topic-tag">Unreal Engine</span>
+                        <span class="topic-tag">C# Game Dev</span>
+                        <span class="topic-tag">C++ Game Dev</span>
+                        <span class="topic-tag">2D Games</span>
+                        <span class="topic-tag">3D Games</span>
+                        <span class="topic-tag">Game Design</span>
+                        <span class="topic-tag">Godot</span>
+                    </div>
+                </div>
+                <button class="btn btn-primary" onclick="window.location.href='courses.html?category=game'">
+                    Xem Tất Cả Khóa Học
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Sẵn Sàng Bắt Đầu Hành Trình Học Tập?</h2>
+                <p>Tham gia cùng hàng nghìn học viên đã thay đổi sự nghiệp của họ với LearnHub</p>
+                <div class="cta-buttons">
+                    <button class="btn btn-primary btn-large" onclick="window.location.href='courses.html'">
+                        Khám Phá Khóa Học
+                    </button>
+                    <button class="btn btn-secondary btn-large" onclick="showRegisterModal()">
+                        Đăng Ký Miễn Phí
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>LearnHub</h3>
+                    <p>Nền tảng học trực tuyến hàng đầu Việt Nam, mang đến những khóa học chất lượng cao với giá thành hợp lý.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Khóa Học</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">Mobile App</a></li>
+                        <li><a href="#">AI & ML</a></li>
+                        <li><a href="#">UI/UX Design</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Hỗ Trợ</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Trung tâm trợ giúp</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Community</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Liên Hệ</h3>
+                    <ul class="footer-links">
+                        <li>📧 info@learnhub.vn</li>
+                        <li>📞 1900-1234</li>
+                        <li>📍 Tp Hồ Chí Minh, Việt Nam</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 LearnHub. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODALS -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('loginModal')">&times;</button>
+            <h2 class="modal-title">Đăng Nhập</h2>
+            <button class="google-btn" onclick="loginWithGoogle()">🔍 Đăng nhập với Google</button>
+            <div class="divider"><span>hoặc</span></div>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-input" placeholder="Nhập email của bạn" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Mật khẩu</label>
+                    <input type="password" class="form-input" placeholder="Nhập mật khẩu" required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Đăng Nhập</button>
+            </form>
+            <div class="auth-switch">
+                Chưa có tài khoản? <a href="#" onclick="switchToRegister()">Đăng ký ngay</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('registerModal')">&times;</button>
+            <h2 class="modal-title">Đăng Ký</h2>
+            <button class="google-btn" onclick="registerWithGoogle()">🔍 Đăng ký với Google</button>
+            <div class="divider"><span>hoặc</span></div>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label class="form-label">Họ và tên</label>
+                    <input type="text" class="form-input" placeholder="Nhập họ tên đầy đủ" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-input" placeholder="Nhập email của bạn" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Mật khẩu</label>
+                    <input type="password" class="form-input" placeholder="Nhập mật khẩu" required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Đăng Ký</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

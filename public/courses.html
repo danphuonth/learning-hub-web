@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khóa Học - LearnHub</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="module" src="/js/script.js"></script>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo" onclick="window.location.href='home.html'">LearnHub</div>
+            <ul class="nav-menu">
+                <li><a class="nav-link" href="home.html">Trang Chủ</a></li>
+                <li><a class="nav-link active" href="courses.html">Khóa Học</a></li>
+                <li><a class="nav-link" href="categories.html">Danh Mục</a></li>
+                <li><a class="nav-link" href="blog.html">Blog</a></li>
+                <li><a class="nav-link" href="about.html">Giới Thiệu</a></li>
+            </ul>
+            <div class="nav-actions" id="navActions">
+                <span class="btn btn-secondary" onclick="showLoginModal()">Đăng Nhập</span>
+                <span class="btn btn-primary" onclick="showRegisterModal()">Đăng Ký</span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Tất Cả Khóa Học</h1>
+            <p>Khám phá hơn 500+ khóa học lập trình chất lượng cao</p>
+        </div>
+    </section>
+
+    <!-- FILTERS & SEARCH -->
+    <section class="courses-filter-section">
+        <div class="container">
+            <div class="filter-bar">
+                <div class="search-box">
+                    <input type="text" placeholder="Tìm kiếm khóa học..." class="filter-search">
+                    <button class="search-btn">🔍</button>
+                </div>
+                
+                <div class="filter-group">
+                    <select class="filter-select">
+                        <option value="">Tất cả danh mục</option>
+                        <option value="frontend">Frontend</option>
+                        <option value="backend">Backend</option>
+                        <option value="fullstack">Full-Stack</option>
+                        <option value="mobile">Mobile</option>
+                        <option value="ai">AI & ML</option>
+                        <option value="design">UI/UX Design</option>
+                    </select>
+                    
+                    <select class="filter-select">
+                        <option value="">Mức độ</option>
+                        <option value="beginner">Cơ bản</option>
+                        <option value="intermediate">Trung cấp</option>
+                        <option value="advanced">Nâng cao</option>
+                    </select>
+                    
+                    <select class="filter-select">
+                        <option value="">Giá</option>
+                        <option value="free">Miễn phí</option>
+                        <option value="paid">Có phí</option>
+                        <option value="premium">Premium</option>
+                    </select>
+                    
+                    <select class="filter-select">
+                        <option value="popular">Phổ biến nhất</option>
+                        <option value="newest">Mới nhất</option>
+                        <option value="rating">Đánh giá cao</option>
+                        <option value="price-low">Giá thấp</option>
+                        <option value="price-high">Giá cao</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COURSES LIST -->
+    <section class="courses-list-section">
+        <div class="container">
+            <div class="courses-grid">
+                <!-- Course 1 -->
+                <div class="course-card">
+                    <div class="course-thumbnail">
+                        <div class="play-button">▶</div>
+                        <div class="premium-badge">PREMIUM</div>
+                        React.js Toàn Tập
+                    </div>
+                    <div class="course-content">
+                        <div class="course-category">Frontend</div>
+                        <h3 class="course-title">Xây Dựng Ứng Dụng Web Hiện Đại Với React.js</h3>
+                        <div class="course-instructor">Giảng viên: Nguyễn Văn A</div>
+                        <div class="course-stats">
+                            <span>📚 45 bài học</span>
+                            <span>⏱️ 12 giờ</span>
+                            <span>👥 2,345 học viên</span>
+                        </div>
+                        <div class="course-meta">
+                            <div class="course-rating">⭐ 4.8 (1,234)</div>
+                            <div class="course-price">
+                                1,299,000đ
+                                <span class="old-price">1,999,000đ</span>
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <button class="btn-course btn-preview" onclick="previewCourse('React.js')">Xem Trước</button>
+                            <button class="btn-course btn-enroll" onclick="enrollCourse('React.js', 1299000)">Đăng Ký Học</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 2 -->
+                <div class="course-card">
+                    <div class="course-thumbnail">
+                        <div class="play-button">▶</div>
+                        <div class="premium-badge">PREMIUM</div>
+                        Node.js Backend
+                    </div>
+                    <div class="course-content">
+                        <div class="course-category">Backend</div>
+                        <h3 class="course-title">Lập Trình Backend Chuyên Nghiệp Với Node.js</h3>
+                        <div class="course-instructor">Giảng viên: Trần Thị B</div>
+                        <div class="course-stats">
+                            <span>📚 52 bài học</span>
+                            <span>⏱️ 15 giờ</span>
+                            <span>👥 1,876 học viên</span>
+                        </div>
+                        <div class="course-meta">
+                            <div class="course-rating">⭐ 4.9 (987)</div>
+                            <div class="course-price">
+                                1,599,000đ
+                                <span class="old-price">2,299,000đ</span>
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <button class="btn-course btn-preview" onclick="previewCourse('Node.js')">Xem Trước</button>
+                            <button class="btn-course btn-enroll" onclick="enrollCourse('Node.js', 1599000)">Đăng Ký Học</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 3 -->
+                <div class="course-card">
+                    <div class="course-thumbnail">
+                        <div class="play-button">▶</div>
+                        Python Full-Stack
+                    </div>
+                    <div class="course-content">
+                        <div class="course-category">Full-Stack</div>
+                        <h3 class="course-title">Trở Thành Full-Stack Developer Với Python</h3>
+                        <div class="course-instructor">Giảng viên: Lê Văn C</div>
+                        <div class="course-stats">
+                            <span>📚 60 bài học</span>
+                            <span>⏱️ 18 giờ</span>
+                            <span>👥 3,567 học viên</span>
+                        </div>
+                        <div class="course-meta">
+                            <div class="course-rating">⭐ 4.7 (2,156)</div>
+                            <div class="course-price">Miễn Phí</div>
+                        </div>
+                        <div class="course-actions">
+                            <button class="btn-course btn-preview" onclick="previewCourse('Python')">Xem Trước</button>
+                            <button class="btn-course btn-enroll" onclick="enrollCourse('Python', 0)">Học Ngay</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 4 -->
+                <div class="course-card">
+                    <div class="course-thumbnail">
+                        <div class="play-button">▶</div>
+                        <div class="premium-badge">PREMIUM</div>
+                        Vue.js Framework
+                    </div>
+                    <div class="course-content">
+                        <div class="course-category">Frontend</div>
+                        <h3 class="course-title">Làm Chủ Vue.js Từ Cơ Bản Đến Nâng Cao</h3>
+                        <div class="course-instructor">Giảng viên: Phạm Văn D</div>
+                        <div class="course-stats">
+                            <span>📚 38 bài học</span>
+                            <span>⏱️ 10 giờ</span>
+                            <span>👥 1,234 học viên</span>
+                        </div>
+                        <div class="course-meta">
+                            <div class="course-rating">⭐ 4.6 (756)</div>
+                            <div class="course-price">
+                                999,000đ
+                                <span class="old-price">1,499,000đ</span>
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <button class="btn-course btn-preview" onclick="previewCourse('Vue.js')">Xem Trước</button>
+                            <button class="btn-course btn-enroll" onclick="enrollCourse('Vue.js', 999000)">Đăng Ký Học</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 5 -->
+                <div class="course-card">
+                    <div class="course-thumbnail">
+                        <div class="play-button">▶</div>
+                        Flutter Mobile
+                    </div>
+                    <div class="course-content">
+                        <div class="course-category">Mobile</div>
+                        <h3 class="course-title">Phát Triển Ứng Dụng Mobile Với Flutter</h3>
+                        <div class="course-instructor">Giảng viên: Hoàng Thị E</div>
+                        <div class="course-stats">
+                            <span>📚 48 bài học</span>
+                            <span>⏱️ 14 giờ</span>
+                            <span>👥 1,987 học viên</span>
+                        </div>
+                        <div class="course-meta">
+                            <div class="course-rating">⭐ 4.8 (1,432)</div>
+                            <div class="course-price">Miễn Phí</div>
+                        </div>
+                        <div class="course-actions">
+                            <button class="btn-course btn-preview" onclick="previewCourse('Flutter')">Xem Trước</button>
+                            <button class="btn-course btn-enroll" onclick="enrollCourse('Flutter', 0)">Học Ngay</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 6 -->
+                <div class="course-card">
+                    <div class="course-thumbnail">
+                        <div class="play-button">▶</div>
+                        <div class="premium-badge">PREMIUM</div>
+                        Machine Learning
+                    </div>
+                    <div class="course-content">
+                        <div class="course-category">AI & ML</div>
+                        <h3 class="course-title">Machine Learning Từ A-Z Với Python</h3>
+                        <div class="course-instructor">Giảng viên: Vũ Văn F</div>
+                        <div class="course-stats">
+                            <span>📚 65 bài học</span>
+                            <span>⏱️ 20 giờ</span>
+                            <span>👥 2,876 học viên</span>
+                        </div>
+                        <div class="course-meta">
+                            <div class="course-rating">⭐ 4.9 (1,876)</div>
+                            <div class="course-price">
+                                2,499,000đ
+                                <span class="old-price">3,499,000đ</span>
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <button class="btn-course btn-preview" onclick="previewCourse('ML')">Xem Trước</button>
+                            <button class="btn-course btn-enroll" onclick="enrollCourse('ML', 2499000)">Đăng Ký Học</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 7 -->
+                <div class="course-card">
+                    <div class="course-thumbnail">
+                        <div class="play-button">▶</div>
+                        Docker & Kubernetes
+                    </div>
+                    <div class="course-content">
+                        <div class="course-category">DevOps</div>
+                        <h3 class="course-title">DevOps với Docker và Kubernetes</h3>
+                        <div class="course-instructor">Giảng viên: Đỗ Văn G</div>
+                        <div class="course-stats">
+                            <span>📚 42 bài học</span>
+                            <span>⏱️ 11 giờ</span>
+                            <span>👥 1,543 học viên</span>
+                        </div>
+                        <div class="course-meta">
+                            <div class="course-rating">⭐ 4.7 (923)</div>
+                            <div class="course-price">
+                                1,799,000đ
+                                <span class="old-price">2,499,000đ</span>
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <button class="btn-course btn-preview" onclick="previewCourse('DevOps')">Xem Trước</button>
+                            <button class="btn-course btn-enroll" onclick="enrollCourse('DevOps', 1799000)">Đăng Ký Học</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 8 -->
+                <div class="course-card">
+                    <div class="course-thumbnail">
+                        <div class="play-button">▶</div>
+                        <div class="premium-badge">PREMIUM</div>
+                        UI/UX Design
+                    </div>
+                    <div class="course-content">
+                        <div class="course-category">Design</div>
+                        <h3 class="course-title">UI/UX Design Chuyên Nghiệp Với Figma</h3>
+                        <div class="course-instructor">Giảng viên: Ngô Thị H</div>
+                        <div class="course-stats">
+                            <span>📚 55 bài học</span>
+                            <span>⏱️ 16 giờ</span>
+                            <span>👥 2,234 học viên</span>
+                        </div>
+                        <div class="course-meta">
+                            <div class="course-rating">⭐ 4.8 (1,654)</div>
+                            <div class="course-price">
+                                1,399,000đ
+                                <span class="old-price">1,999,000đ</span>
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <button class="btn-course btn-preview" onclick="previewCourse('UIUX')">Xem Trước</button>
+                            <button class="btn-course btn-enroll" onclick="enrollCourse('UIUX', 1399000)">Đăng Ký Học</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 9 -->
+                <div class="course-card">
+                    <div class="course-thumbnail">
+                        <div class="play-button">▶</div>
+                        AWS Cloud
+                    </div>
+                    <div class="course-content">
+                        <div class="course-category">Cloud</div>
+                        <h3 class="course-title">Amazon Web Services - Từ Cơ Bản Đến Chuyên Sâu</h3>
+                        <div class="course-instructor">Giảng viên: Trịnh Văn I</div>
+                        <div class="course-stats">
+                            <span>📚 50 bài học</span>
+                            <span>⏱️ 13 giờ</span>
+                            <span>👥 1,678 học viên</span>
+                        </div>
+                        <div class="course-meta">
+                            <div class="course-rating">⭐ 4.6 (834)</div>
+                            <div class="course-price">Miễn Phí</div>
+                        </div>
+                        <div class="course-actions">
+                            <button class="btn-course btn-preview" onclick="previewCourse('AWS')">Xem Trước</button>
+                            <button class="btn-course btn-enroll" onclick="enrollCourse('AWS', 0)">Học Ngay</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAGINATION -->
+            <div class="pagination">
+                <button class="pagination-btn" disabled>← Trước</button>
+                <button class="pagination-btn active">1</button>
+                <button class="pagination-btn">2</button>
+                <button class="pagination-btn">3</button>
+                <button class="pagination-btn">4</button>
+                <button class="pagination-btn">5</button>
+                <button class="pagination-btn">Sau →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>LearnHub</h3>
+                    <p>Nền tảng học trực tuyến hàng đầu Việt Nam, mang đến những khóa học chất lượng cao với giá thành hợp lý.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Khóa Học</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">Mobile App</a></li>
+                        <li><a href="#">AI & ML</a></li>
+                        <li><a href="#">UI/UX Design</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Hỗ Trợ</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Trung tâm trợ giúp</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Community</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Liên Hệ</h3>
+                    <ul class="footer-links">
+                        <li>📧 info@learnhub.vn</li>
+                        <li>📞 1900-1234</li>
+                        <li>📍 Tp Hồ Chí Minh, Việt Nam</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 LearnHub. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODALS (Login, Register, Payment, Success) -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('loginModal')">&times;</button>
+            <h2 class="modal-title">Đăng Nhập</h2>
+            <button class="google-btn" onclick="loginWithGoogle()">🔍 Đăng nhập với Google</button>
+            <div class="divider"><span>hoặc</span></div>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-input" placeholder="Nhập email của bạn" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Mật khẩu</label>
+                    <input type="password" class="form-input" placeholder="Nhập mật khẩu" required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Đăng Nhập</button>
+            </form>
+            <div class="auth-switch">
+                Chưa có tài khoản? <a href="#" onclick="switchToRegister()">Đăng ký ngay</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('registerModal')">&times;</button>
+            <h2 class="modal-title">Đăng Ký</h2>
+            <button class="google-btn" onclick="registerWithGoogle()">🔍 Đăng ký với Google</button>
+            <div class="divider"><span>hoặc</span></div>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label class="form-label">Họ và tên</label>
+                    <input type="text" class="form-input" placeholder="Nhập họ tên đầy đủ" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-input" placeholder="Nhập email của bạn" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Mật khẩu</label>
+                    <input type="password" class="form-input" placeholder="Nhập mật khẩu" required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Đăng Ký</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="paymentModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('paymentModal')">&times;</button>
+            <h2 class="modal-title">Thanh Toán Khóa Học</h2>
+            <div class="payment-info">
+                <h3 id="paymentCourseTitle"></h3>
+                <p>Giá: <span id="paymentAmount"></span></p>
+            </div>
+            <button class="btn btn-primary" style="width: 100%;" onclick="processPayment()">Thanh Toán Ngay</button>
+        </div>
+    </div>
+
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <h2 class="modal-title">🎉 Thành Công!</h2>
+            <p style="text-align: center; margin: 1.5rem 0;">
+                <span id="successMessage"></span>
+            </p>
+            <button class="btn btn-primary" style="width: 100%;" onclick="closeModal('successModal')">Tiếp Tục</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - LearnHub</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="module" src="/js/script.js"></script>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo" onclick="window.location.href='home.html'">LearnHub</div>
+            <ul class="nav-menu">
+                <li><a class="nav-link" href="home.html">Trang Chủ</a></li>
+                <li><a class="nav-link" href="courses.html">Khóa Học</a></li>
+                <li><a class="nav-link" href="categories.html">Danh Mục</a></li>
+                <li><a class="nav-link active" href="blog.html">Blog</a></li>
+                <li><a class="nav-link" href="about.html">Giới Thiệu</a></li>
+            </ul>
+            <div class="nav-actions" id="navActions">
+                <span class="btn btn-secondary" onclick="showLoginModal()">Đăng Nhập</span>
+                <span class="btn btn-primary" onclick="showRegisterModal()">Đăng Ký</span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Blog Công Nghệ</h1>
+            <p>Cập nhật kiến thức, xu hướng và tips học lập trình hiệu quả</p>
+        </div>
+    </section>
+
+    <!-- BLOG FILTER -->
+    <section class="blog-filter-section">
+        <div class="container">
+            <div class="blog-filter-bar">
+                <div class="filter-tabs">
+                    <button class="filter-tab active">Tất Cả</button>
+                    <button class="filter-tab">Lập Trình</button>
+                    <button class="filter-tab">Sự Nghiệp</button>
+                    <button class="filter-tab">Tips & Tricks</button>
+                    <button class="filter-tab">Công Nghệ</button>
+                    <button class="filter-tab">Phỏng Vấn</button>
+                </div>
+                <div class="blog-search">
+                    <input type="text" placeholder="Tìm kiếm bài viết..." class="filter-search">
+                    <button class="search-btn">🔍</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED POST -->
+    <section class="featured-post-section">
+        <div class="container">
+            <div class="featured-post">
+                <div class="featured-post-image">
+                    <div class="featured-badge">BẢI VIẾT NỔI BẬT</div>
+                    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); height: 100%; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: white;">
+                        🚀
+                    </div>
+                </div>
+                <div class="featured-post-content">
+                    <div class="post-meta">
+                        <span class="post-category">Lập Trình</span>
+                        <span class="post-date">📅 15/10/2024</span>
+                        <span class="post-read-time">⏱️ 8 phút đọc</span>
+                    </div>
+                    <h2>10 Xu Hướng Lập Trình Bạn Cần Biết Trong Năm 2024</h2>
+                    <p>Khám phá những công nghệ và xu hướng lập trình đang thống trị thị trường IT hiện nay. Từ AI/ML đến Web3, blockchain và những framework mới nhất đang được các công ty lớn áp dụng.</p>
+                    <div class="post-author">
+                        <div class="author-avatar">NA</div>
+                        <div>
+                            <div class="author-name">Nguyễn Văn An</div>
+                            <div class="author-title">Senior Developer</div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary">Đọc Tiếp →</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOG POSTS GRID -->
+    <section class="blog-posts-section">
+        <div class="container">
+            <div class="blog-grid">
+                <!-- Post 1 -->
+                <article class="blog-card">
+                    <div class="blog-card-image">
+                        <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); height: 200px; display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                            💻
+                        </div>
+                        <span class="post-category-badge">Tips & Tricks</span>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="post-meta">
+                            <span class="post-date">📅 12/10/2024</span>
+                            <span class="post-read-time">⏱️ 5 phút</span>
+                        </div>
+                        <h3>5 Tips Học React.js Hiệu Quả Cho Người Mới Bắt Đầu</h3>
+                        <p>Hướng dẫn chi tiết cách tiếp cận và học React.js một cách khoa học, giúp bạn nắm vững từ cơ bản đến nâng cao.</p>
+                        <div class="blog-card-footer">
+                            <div class="post-author-small">
+                                <div class="author-avatar-small">TH</div>
+                                <span>Trần Hải</span>
+                            </div>
+                            <button class="btn-read-more">Đọc Thêm →</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Post 2 -->
+                <article class="blog-card">
+                    <div class="blog-card-image">
+                        <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); height: 200px; display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                            🎯
+                        </div>
+                        <span class="post-category-badge">Sự Nghiệp</span>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="post-meta">
+                            <span class="post-date">📅 10/10/2024</span>
+                            <span class="post-read-time">⏱️ 7 phút</span>
+                        </div>
+                        <h3>Lộ Trình Trở Thành Full-Stack Developer Trong 6 Tháng</h3>
+                        <p>Chi tiết từng bước để bạn có thể tự học và trở thành Full-Stack Developer chuyên nghiệp chỉ trong 6 tháng.</p>
+                        <div class="blog-card-footer">
+                            <div class="post-author-small">
+                                <div class="author-avatar-small">LM</div>
+                                <span>Lê Mai</span>
+                            </div>
+                            <button class="btn-read-more">Đọc Thêm →</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Post 3 -->
+                <article class="blog-card">
+                    <div class="blog-card-image">
+                        <div style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); height: 200px; display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                            🤖
+                        </div>
+                        <span class="post-category-badge">Công Nghệ</span>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="post-meta">
+                            <span class="post-date">📅 08/10/2024</span>
+                            <span class="post-read-time">⏱️ 10 phút</span>
+                        </div>
+                        <h3>AI và Machine Learning: Tương Lai Của Lập Trình</h3>
+                        <p>Tìm hiểu về AI, ML và cách chúng đang thay đổi ngành công nghệ. Cơ hội và thách thức cho lập trình viên.</p>
+                        <div class="blog-card-footer">
+                            <div class="post-author-small">
+                                <div class="author-avatar-small">PD</div>
+                                <span>Phạm Đức</span>
+                            </div>
+                            <button class="btn-read-more">Đọc Thêm →</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Post 4 -->
+                <article class="blog-card">
+                    <div class="blog-card-image">
+                        <div style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%); height: 200px; display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                            📝
+                        </div>
+                        <span class="post-category-badge">Phỏng Vấn</span>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="post-meta">
+                            <span class="post-date">📅 05/10/2024</span>
+                            <span class="post-read-time">⏱️ 12 phút</span>
+                        </div>
+                        <h3>Top 50 Câu Hỏi Phỏng Vấn JavaScript Thường Gặp</h3>
+                        <p>Tổng hợp các câu hỏi phỏng vấn JavaScript từ cơ bản đến nâng cao, kèm đáp án chi tiết và giải thích.</p>
+                        <div class="blog-card-footer">
+                            <div class="post-author-small">
+                                <div class="author-avatar-small">NH</div>
+                                <span>Ngô Hà</span>
+                            </div>
+                            <button class="btn-read-more">Đọc Thêm →</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Post 5 -->
+                <article class="blog-card">
+                    <div class="blog-card-image">
+                        <div style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); height: 200px; display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                            ⚡
+                        </div>
+                        <span class="post-category-badge">Tips & Tricks</span>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="post-meta">
+                            <span class="post-date">📅 03/10/2024</span>
+                            <span class="post-read-time">⏱️ 6 phút</span>
+                        </div>
+                        <h3>10 VS Code Extensions Không Thể Thiếu Cho Developer</h3>
+                        <p>Những extension giúp tăng năng suất làm việc gấp đôi khi code. Từ theme đẹp đến công cụ debug mạnh mẽ.</p>
+                        <div class="blog-card-footer">
+                            <div class="post-author-small">
+                                <div class="author-avatar-small">VT</div>
+                                <span>Vũ Tuấn</span>
+                            </div>
+                            <button class="btn-read-more">Đọc Thêm →</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Post 6 -->
+                <article class="blog-card">
+                    <div class="blog-card-image">
+                        <div style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%); height: 200px; display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                            🎨
+                        </div>
+                        <span class="post-category-badge">Lập Trình</span>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="post-meta">
+                            <span class="post-date">📅 01/10/2024</span>
+                            <span class="post-read-time">⏱️ 8 phút</span>
+                        </div>
+                        <h3>Clean Code: Nghệ Thuật Viết Code Dễ Đọc Và Bảo Trì</h3>
+                        <p>Những nguyên tắc và best practices để viết code sạch, dễ hiểu và dễ bảo trì theo tiêu chuẩn quốc tế.</p>
+                        <div class="blog-card-footer">
+                            <div class="post-author-small">
+                                <div class="author-avatar-small">HL</div>
+                                <span>Hoàng Linh</span>
+                            </div>
+                            <button class="btn-read-more">Đọc Thêm →</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- PAGINATION -->
+            <div class="pagination">
+                <button class="pagination-btn" disabled>← Trước</button>
+                <button class="pagination-btn active">1</button>
+                <button class="pagination-btn">2</button>
+                <button class="pagination-btn">3</button>
+                <button class="pagination-btn">4</button>
+                <button class="pagination-btn">Sau →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>📧 Đăng Ký Nhận Bản Tin</h2>
+                <p>Nhận các bài viết mới nhất và tips học lập trình hiệu quả mỗi tuần</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Nhập email của bạn..." class="newsletter-input" required>
+                    <button type="submit" class="btn btn-primary">Đăng Ký</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>LearnHub</h3>
+                    <p>Nền tảng học trực tuyến hàng đầu Việt Nam, mang đến những khóa học chất lượng cao với giá thành hợp lý.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Khóa Học</h3>
+                    <ul class="footer-links">
+                        <li><a href="courses.html?category=web">Web Development</a></li>
+                        <li><a href="courses.html?category=mobile">Mobile App</a></li>
+                        <li><a href="courses.html?category=ai">AI & ML</a></li>
+                        <li><a href="courses.html?category=design">UI/UX Design</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Hỗ Trợ</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Trung tâm trợ giúp</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Community</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Liên Hệ</h3>
+                    <ul class="footer-links">
+                        <li>📧 info@learnhub.vn</li>
+                        <li>📞 1900-1234</li>
+                        <li>📍 Tp Hồ Chí Minh, Việt Nam</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 LearnHub. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODALS -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('loginModal')">&times;</button>
+            <h2 class="modal-title">Đăng Nhập</h2>
+            <button class="google-btn" onclick="loginWithGoogle()">🔍 Đăng nhập với Google</button>
+            <div class="divider"><span>hoặc</span></div>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-input" placeholder="Nhập email của bạn" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Mật khẩu</label>
+                    <input type="password" class="form-input" placeholder="Nhập mật khẩu" required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Đăng Nhập</button>
+            </form>
+            <div class="auth-switch">
+                Chưa có tài khoản? <a href="#" onclick="switchToRegister()">Đăng ký ngay</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('registerModal')">&times;</button>
+            <h2 class="modal-title">Đăng Ký</h2>
+            <button class="google-btn" onclick="registerWithGoogle()">🔍 Đăng ký với Google</button>
+            <div class="divider"><span>hoặc</span></div>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label class="form-label">Họ và tên</label>
+                    <input type="text" class="form-input" placeholder="Nhập họ tên đầy đủ" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-input" placeholder="Nhập email của bạn" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Mật khẩu</label>
+                    <input type="password" class="form-input" placeholder="Nhập mật khẩu" required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Đăng Ký</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

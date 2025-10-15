@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới Thiệu - LearnHub</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="module" src="/js/script.js"></script>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo" onclick="window.location.href='home.html'">LearnHub</div>
+            <ul class="nav-menu">
+                <li><a class="nav-link" href="home.html">Trang Chủ</a></li>
+                <li><a class="nav-link" href="courses.html">Khóa Học</a></li>
+                <li><a class="nav-link" href="categories.html">Danh Mục</a></li>
+                <li><a class="nav-link" href="blog.html">Blog</a></li>
+                <li><a class="nav-link active" href="about.html">Giới Thiệu</a></li>
+            </ul>
+            <div class="nav-actions" id="navActions">
+                <span class="btn btn-secondary" onclick="showLoginModal()">Đăng Nhập</span>
+                <span class="btn btn-primary" onclick="showRegisterModal()">Đăng Ký</span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Về LearnHub</h1>
+            <p>Nền tảng học lập trình trực tuyến hàng đầu Việt Nam</p>
+        </div>
+    </section>
+
+    <!-- ABOUT INTRO -->
+    <section class="about-intro-section">
+        <div class="container">
+            <div class="about-intro-content">
+                <div class="about-intro-text">
+                    <h2>Sứ Mệnh Của Chúng Tôi</h2>
+                    <p>LearnHub được thành lập với sứ mệnh <strong>dân chủ hóa giáo dục công nghệ</strong>, mang đến cơ hội học tập chất lượng cao cho mọi người, ở mọi nơi.</p>
+                    <p>Chúng tôi tin rằng mỗi người đều có tiềm năng để trở thành lập trình viên xuất sắc. Với phương pháp giảng dạy hiện đại, nội dung cập nhật và cộng đồng hỗ trợ nhiệt tình, chúng tôi đã giúp hàng nghìn học viên thay đổi cuộc đời và sự nghiệp của họ.</p>
+                    <div class="about-stats-inline">
+                        <div class="stat-inline-item">
+                            <h3>10,000+</h3>
+                            <p>Học viên</p>
+                        </div>
+                        <div class="stat-inline-item">
+                            <h3>500+</h3>
+                            <p>Khóa học</p>
+                        </div>
+                        <div class="stat-inline-item">
+                            <h3>50+</h3>
+                            <p>Giảng viên</p>
+                        </div>
+                        <div class="stat-inline-item">
+                            <h3>95%</h3>
+                            <p>Hài lòng</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-intro-image">
+                    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); height: 100%; border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 5rem; color: white;">
+                        🎓
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CORE VALUES -->
+    <section class="core-values-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Giá Trị Cốt Lõi</h2>
+                <p class="section-subtitle">Những giá trị định hình cách chúng tôi làm việc và phục vụ học viên</p>
+            </div>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">💡</div>
+                    <h3>Chất Lượng Hàng Đầu</h3>
+                    <p>Cam kết cung cấp nội dung học tập chất lượng cao nhất, được nghiên cứu kỹ lưỡng và cập nhật liên tục</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🤝</div>
+                    <h3>Cộng Đồng Hỗ Trợ</h3>
+                    <p>Xây dựng cộng đồng học tập năng động, nơi mọi người cùng nhau học hỏi và phát triển</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🎯</div>
+                    <h3>Thực Tiễn Ứng Dụng</h3>
+                    <p>Tập trung vào kỹ năng thực tế, giúp học viên sẵn sàng cho công việc thực tế ngay sau khóa học</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🚀</div>
+                    <h3>Đổi Mới Liên Tục</h3>
+                    <p>Luôn cập nhật công nghệ mới nhất và phương pháp giảng dạy hiện đại nhất</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM -->
+    <section class="team-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Đội Ngũ Của Chúng Tôi</h2>
+                <p class="section-subtitle">Những người đam mê công nghệ và giáo dục</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); width: 100%; height: 100%; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: white;">
+                            👨‍💼
+                        </div>
+                    </div>
+                    <h3>Nguyễn Văn A</h3>
+                    <p class="team-role">CEO & Founder</p>
+                    <p class="team-bio">10+ năm kinh nghiệm trong ngành công nghệ, từng làm việc tại Google và Facebook</p>
+                    <div class="team-social">
+                        <a href="#">💼 LinkedIn</a>
+                        <a href="#">🐦 Twitter</a>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); width: 100%; height: 100%; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: white;">
+                            👩‍💼
+                        </div>
+                    </div>
+                    <h3>Trần Thị B</h3>
+                    <p class="team-role">CTO</p>
+                    <p class="team-bio">Chuyên gia về AI/ML và Cloud Computing, có 12+ năm kinh nghiệm phát triển sản phẩm</p>
+                    <div class="team-social">
+                        <a href="#">💼 LinkedIn</a>
+                        <a href="#">🐦 Twitter</a>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); width: 100%; height: 100%; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: white;">
+                            👨‍🏫
+                        </div>
+                    </div>
+                    <h3>Lê Văn C</h3>
+                    <p class="team-role">Giám Đốc Học Thuật</p>
+                    <p class="team-bio">Chuyên gia giáo dục công nghệ, đã đào tạo hơn 5,000 lập trình viên thành công</p>
+                    <div class="team-social">
+                        <a href="#">💼 LinkedIn</a>
+                        <a href="#">🐦 Twitter</a>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <div style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); width: 100%; height: 100%; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: white;">
+                            👩‍🎨
+                        </div>
+                    </div>
+                    <h3>Phạm Thị D</h3>
+                    <p class="team-role">Head of Design</p>
+                    <p class="team-bio">UI/UX Designer với 8+ năm kinh nghiệm, chuyên về thiết kế sản phẩm giáo dục</p>
+                    <div class="team-social">
+                        <a href="#">💼 LinkedIn</a>
+                        <a href="#">🐦 Twitter</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section class="timeline-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Hành Trình Phát Triển</h2>
+                <p class="section-subtitle">Từ ý tưởng đến thực tế</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2020</div>
+                        <h3>Khởi Đầu</h3>
+                        <p>LearnHub được thành lập với 5 khóa học đầu tiên và 100 học viên</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2021</div>
+                        <h3>Mở Rộng</h3>
+                        <p>Tăng lên 50+ khóa học, đạt 1,000 học viên và ra mắt ứng dụng mobile</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2022</div>
+                        <h3>Phát Triển Mạnh</h3>
+                        <p>Đạt 5,000 học viên, hợp tác với 30+ doanh nghiệp và mở rộng ra khu vực</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2023</div>
+                        <h3>Dẫn Đầu Thị Trường</h3>
+                        <p>Vượt mốc 10,000 học viên, 500+ khóa học và trở thành nền tảng số 1 Việt Nam</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot active"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2024</div>
+                        <h3>Tương Lai</h3>
+                        <p>Tiếp tục đổi mới và mở rộng, mục tiêu đào tạo 50,000 lập trình viên</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PARTNERS -->
+    <section class="partners-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Đối Tác & Khách Hàng</h2>
+                <p class="section-subtitle">Được tin tưởng bởi các công ty hàng đầu</p>
+            </div>
+            <div class="partners-grid">
+                <div class="partner-logo">
+                    <div style="background: #f8f9fa; padding: 2rem; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; color: #667eea;">
+                        FPT Software
+                    </div>
+                </div>
+                <div class="partner-logo">
+                    <div style="background: #f8f9fa; padding: 2rem; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; color: #667eea;">
+                        VNG Corporation
+                    </div>
+                </div>
+                <div class="partner-logo">
+                    <div style="background: #f8f9fa; padding: 2rem; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; color: #667eea;">
+                        Tiki
+                    </div>
+                </div>
+                <div class="partner-logo">
+                    <div style="background: #f8f9fa; padding: 2rem; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; color: #667eea;">
+                        Shopee
+                    </div>
+                </div>
+                <div class="partner-logo">
+                    <div style="background: #f8f9fa; padding: 2rem; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; color: #667eea;">
+                        Grab
+                    </div>
+                </div>
+                <div class="partner-logo">
+                    <div style="background: #f8f9fa; padding: 2rem; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; color: #667eea;">
+                        Momo
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT CTA -->
+    <section class="contact-cta-section">
+        <div class="container">
+            <div class="contact-cta-content">
+                <h2>Bạn Muốn Hợp Tác Với Chúng Tôi?</h2>
+                <p>Chúng tôi luôn sẵn sàng lắng nghe và hợp tác với các đối tác, doanh nghiệp và tổ chức giáo dục</p>
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <div class="contact-icon">📧</div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@learnhub.vn</p>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <h4>Điện thoại</h4>
+                            <p>1900-1234</p>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <h4>Địa chỉ</h4>
+                            <p>Quận 1, Tp HCM</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-primary btn-large">Liên Hệ Ngay</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>LearnHub</h3>
+                    <p>Nền tảng học trực tuyến hàng đầu Việt Nam, mang đến những khóa học chất lượng cao với giá thành hợp lý.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Khóa Học</h3>
+                    <ul class="footer-links">
+                        <li><a href="courses.html?category=web">Web Development</a></li>
+                        <li><a href="courses.html?category=mobile">Mobile App</a></li>
+                        <li><a href="courses.html?category=ai">AI & ML</a></li>
+                        <li><a href="courses.html?category=design">UI/UX Design</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Hỗ Trợ</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Trung tâm trợ giúp</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Community</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Liên Hệ</h3>
+                    <ul class="footer-links">
+                        <li>📧 info@learnhub.vn</li>
+                        <li>📞 1900-1234</li>
+                        <li>📍 Tp Hồ Chí Minh, Việt Nam</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 LearnHub. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODALS -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('loginModal')">&times;</button>
+            <h2 class="modal-title">Đăng Nhập</h2>
+            <button class="google-btn" onclick="loginWithGoogle()">🔍 Đăng nhập với Google</button>
+            <div class="divider"><span>hoặc</span></div>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-input" placeholder="Nhập email của bạn" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Mật khẩu</label>
+                    <input type="password" class="form-input" placeholder="Nhập mật khẩu" required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Đăng Nhập</button>
+            </form>
+            <div class="auth-switch">
+                Chưa có tài khoản? <a href="#" onclick="switchToRegister()">Đăng ký ngay</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('registerModal')">&times;</button>
+            <h2 class="modal-title">Đăng Ký</h2>
+            <button class="google-btn" onclick="registerWithGoogle()">🔍 Đăng ký với Google</button>
+            <div class="divider"><span>hoặc</span></div>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label class="form-label">Họ và tên</label>
+                    <input type="text" class="form-input" placeholder="Nhập họ tên đầy đủ" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-input" placeholder="Nhập email của bạn" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Mật khẩu</label>
+                    <input type="password" class="form-input" placeholder="Nhập mật khẩu" required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Đăng Ký</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
